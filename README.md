@@ -1,5 +1,5 @@
 # Git repo
-[Repo](https://github.com/ninja020250/udacity-project-2.git)
+[GitHub URLs](https://github.com/ninja020250/udacity-project-2.git)
 
 # Try EB URL
 http://image-filter-starter-code-dev22.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhG_cZjxXIlwfsjseD7-LMSMzWI7txguoSLjCbwM85&s
