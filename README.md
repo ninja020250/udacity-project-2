@@ -1,11 +1,12 @@
+# Git repo
+[Repo](https://github.com/ninja020250/udacity-project-2.git)
+
 # Try EB URL
 http://image-filter-starter-code-dev22.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhG_cZjxXIlwfsjseD7-LMSMzWI7txguoSLjCbwM85&s
 
 # Try CURL
 curl --location 'http://image-filter-starter-code-dev22.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcRhG_cZjxXIlwfsjseD7-LMSMzWI7txguoSLjCbwM85&s=null'
 
-# Git repo
-[Repo](https://github.com/ninja020250/udacity-project-2.git)
 
 # Udagram Image Filtering Microservice
 
