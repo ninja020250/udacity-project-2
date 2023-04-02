@@ -1,6 +1,6 @@
-import express from "express";
 import bodyParser from "body-parser";
-import { filterImageFromURL, deleteLocalFiles } from "./util/util";
+import express, { Request, Response } from "express";
+import { deleteLocalFiles, filterImageFromURL } from "./util/util";
 (async () => {
   // Init the Express application
   const app = express();
@@ -27,22 +27,16 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
 
   /**************************************************************************** */
 
-  app.get("/filteredimage", async (req, res) => {
+  app.get("/filteredimage", async (req: Request, res: Response) => {
     try {
-      const image_url = req.query.image_url;
-      if (typeof image_url != "string") {
-        res.status(400).send({ message: "image_url is required" });
-        return;
-      }
-      const path = await filterImageFromURL(image_url);
-      res.sendFile(path);
+      const absolutePath = (await filterImageFromURL(
+        req.query.image_url as string
+      )) as string;
+      res.sendFile(absolutePath);
       setTimeout(() => {
-        deleteLocalFiles([path]);
+        deleteLocalFiles([absolutePath]);
       }, 0);
     } catch (error) {
-      console.log("====================================");
-      console.log(error);
-      console.log("====================================");
       res.status(404).end("File not found");
     }
   });
